@@ -1,16 +1,20 @@
 class Rooms
 
     attr_reader :name
-    attr_accessor :songs
+    attr_accessor :playlist, :guests
 
-    def initialize(name, songs)
+    def initialize(name)
         @name = name
-        @songs = songs
+        @playlist = []
         @guests = []
     end
 
     def count_songs()
-        return @songs.count
+        return @playlist.count
+    end
+
+    def count_guests()
+        return @guests.count
     end
 
 end
