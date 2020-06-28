@@ -17,4 +17,12 @@ class Rooms
         return @guests.count
     end
 
+    def check_in(guest)
+        return @guests << guest
+    end
+
+    def check_out(guest)
+        return @guests.delete(guest)
+    end
+
 end
