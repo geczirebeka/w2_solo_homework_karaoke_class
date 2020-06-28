@@ -1,8 +1,9 @@
 class Songs
 
-    def intitialize(name, type)
+    attr_reader :name
+
+    def initialize(name)
         @name = name
-        @type = type
     end
 
 
