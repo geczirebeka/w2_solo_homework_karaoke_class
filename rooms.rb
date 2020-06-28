@@ -25,4 +25,8 @@ class Rooms
         return @guests.delete(guest)
     end
 
+    def add_songs(song)
+        return @playlist << song
+    end
+
 end

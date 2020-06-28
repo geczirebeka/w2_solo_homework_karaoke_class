@@ -14,6 +14,9 @@ class TestRooms < Minitest::Test
 
         @guest1 = Guests.new("George", 40)
         @guest2 = Guests.new("Sarah", 60)
+
+        @jazz = Songs.new("Blues night", "Jazz")
+        @blues = Songs.new("Tomorrow", "Blues")
     end
 
 
@@ -39,6 +42,11 @@ class TestRooms < Minitest::Test
         @rooms.check_in(@guest2)
         @rooms.check_out(@guest1)
         assert_equal(1, @rooms.count_guests())
+    end
+
+    def test_can_add_songs_()
+        @rooms.add_songs(@jazz)
+        assert_equal([@jazz], @rooms.playlist())
     end
 
 end
